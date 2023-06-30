@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Planets</h2>
+  <div class="card-container">
+    <div *ngFor="let planet of planets" class="card">
+      <img [src]="planet.image" alt="Planet Image" />
+      <div class="card-content">
+        <h3>{{ planet.name }}</h3>
+        <p>Climate: {{ planet.climate }}</p>
+        <p>Terrain: {{ planet.terrain }}</p>
+        <p>Population: {{ planet.population }}</p>
+      </div>
+    </div>
+  </div>
+</div>

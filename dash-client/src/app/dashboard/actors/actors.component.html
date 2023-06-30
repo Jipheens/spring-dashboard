@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Actors</h2>
+  <div class="card-container">
+    <div *ngFor="let actor of actors" class="card">
+      <img [src]="actor.image" alt="Actor Image" />
+      <div class="card-content">
+        <h3>{{ actor.name }}</h3>
+        <p>Gender: {{ actor.gender }}</p>
+        <p>Birth Year: {{ actor.birthYear }}</p>
+        <p>Height: {{ actor.height }}</p>
+      </div>
+    </div>
+  </div>
+</div>

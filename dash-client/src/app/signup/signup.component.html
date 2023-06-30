@@ -1,0 +1,100 @@
+<div class="signup-form">
+  <h1>Sign Up</h1>
+  <form (ngSubmit)="signup()">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        [(ngModel)]="user.fullName"
+        name="fullName"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="user.email"
+        name="email"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="user.password"
+        name="password"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact</label>
+      <input
+        type="text"
+        id="contact"
+        [(ngModel)]="user.contact"
+        name="contact"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select
+        id="gender"
+        [(ngModel)]="user.gender"
+        name="gender"
+        class="form-control"
+        required
+      >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth</label>
+      <input
+        type="date"
+        id="dateOfBirth"
+        [(ngModel)]="user.dateOfBirth"
+        name="dateOfBirth"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="document">Upload Document (PDF)</label>
+      <input
+        type="file"
+        id="document"
+        name="document"
+        class="form-control"
+        accept="application/pdf"
+        required
+      />
+    </div>
+    <button type="submit" class="signup-button">Sign Up</button>
+  </form>
+  <div class="login-link">
+    <a routerLink="/login">Already have an account? Login</a>
+  </div>
+</div>

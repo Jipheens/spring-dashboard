@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Films</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let film of films">
+      <img class="film-image" [src]="film.image" [alt]="film.title" />
+      <div class="card-content">
+        <h3>{{ film.title }}</h3>
+        <p>{{ film.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

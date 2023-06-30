@@ -1,0 +1,35 @@
+<div class="dashboard-container">
+  <div class="sidebar">
+    <div class="user-profile" (click)="toggleProfile()">
+      <i class="fas fa-user"></i>
+      <span>Profile</span>
+    </div>
+    <nav class="navigation">
+      <a class="navigation-link" routerLink="/dashboard/films">Films</a>
+      <a class="navigation-link" routerLink="/dashboard/planets">Planets</a>
+      <a class="navigation-link" routerLink="/dashboard/actors">Actors</a>
+    </nav>
+    <div class="logout" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </div>
+  </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="user-profile-details" [class.open]="showProfile">
+    <div class="close-icon" (click)="toggleProfile()">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="profile-info">
+      <h2>Profile Details</h2>
+      <p><strong>Name:</strong> {{ userProfile?.fullName }}</p>
+      <p><strong>Email:</strong> {{ userProfile?.email }}</p>
+      <p><strong>Contact:</strong> {{ userProfile?.contact }}</p>
+      <p><strong>Gender:</strong> {{ userProfile?.gender }}</p>
+      <p>
+        <strong>Date of Birth:</strong> {{ userProfile?.dateOfBirth | date }}
+      </p>
+    </div>
+  </div>
+</div>
